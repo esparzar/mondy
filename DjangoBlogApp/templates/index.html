@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="jumbotron text-center">
+        <h3>Enjoy the most excited sports news.</h3>
+        <p>Bringing to you sports from around thge world.</p>
+</div>
+
+
+<p>
+        {% if request.user.is_authenticated %}
+                 {{request.user.username}}
+        {% else %}
+                user logging fialed
+        {% endif %}
+
+</p>
+{% endblock body %}
+
